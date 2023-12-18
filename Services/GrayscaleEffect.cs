@@ -6,12 +6,10 @@ namespace Vecto.Services
     {
         public GrayscaleEffect()
         {
-            // Initialization logic, if needed
         }
 
         public override void ApplyEffect(Image image)
         {
-            // Implement grayscale effect logic here
             Console.WriteLine($"Applying grayscale effect to {image.Name}");
         }
     }

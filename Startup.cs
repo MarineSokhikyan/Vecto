@@ -1,5 +1,4 @@
-﻿// Startup.cs
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -20,8 +19,6 @@ namespace Vecto
 
         public void ConfigureServices(IServiceCollection services)
         {
-            // Other service registrations
-
             services.AddSingleton<ResizeEffect>();
             services.AddSingleton<BlurEffect>();
             services.AddSingleton<GrayscaleEffect>();

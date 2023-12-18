@@ -2,7 +2,6 @@
 
 namespace Vecto.Services
 {
-    // Services/ImageProcessingService.cs
     public class ImageProcessingService : IImageProcessingService
     {
         private readonly List<IImageEffect> _effects;
