@@ -1,0 +1,71 @@
+﻿@model List<Vecto.Models.ImageProcessingModel>
+@{
+    ViewData["Title"] = "Image Processing";
+}
+
+<h2>Image Processing</h2>
+
+<form id="imageForm" asp-action="ProcessImages" asp-controller="Image" method="post" enctype="multipart/form-data">
+    @for (var i = 0; i < Model.Count(); i++)
+    {
+        <div class="image-box row">
+            <div class="upload-section col-md-6">
+                <label for="@Model[i].ImageFile" >Upload Image:</label>
+                <input type="file" asp-for="@Model[i].ImageFile" />
+            </div>
+            <div class="effect-section col-md-3">
+                <div class="row">
+                    <div class="col-12">
+                        <label>
+                            <input type="checkbox" for="SelectedEffects" name="[@i].SelectedEffects" value="Resize" />
+                            Resize
+                        </label>
+                    </div>
+                    <div class="col-12">
+                        <label>
+                            <input type="checkbox" for="SelectedEffects" name="[@i].SelectedEffects" value="Blur" />
+                            Blur
+                        </label>
+                    </div>
+                    <div class="col-12">
+                        <label>
+                            <input type="checkbox" for="SelectedEffects" name="[@i].SelectedEffects" value="Grayscale" />
+                            Grayscale
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="row">
+                    <div class="radius-section col-12">
+                        <label for="@Model[i].Radius">Radius:</label>
+                        <input asp-for="@Model[i].Radius" type="range" value="0" min="0" max="100">
+                        @*  <progress id="radiusProgressBar1" max="100" value="0"></progress> *@
+                    </div>
+                    <div class="size-section col-12">
+                        <label for="@Model[i].Size">Size:</label>
+                        <input type="text" asp-for="@Model[i].Size" id="@Model[i].Size" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    }
+    <button type="submit">Process Images</button>
+</form>
+
+@if (ViewData["ErrorMessage"] != null)
+{
+    <div style="color: red;">@ViewData["ErrorMessage"]</div>
+}
+
+@if (ViewData["ProcessedImages"] != null)
+{
+    <h3>Processed Images:</h3>
+    <ul>
+        @foreach (var imageName in (List<string>)ViewData["ProcessedImages"])
+        {
+            <li>@imageName</li>
+        }
+    </ul>
+}

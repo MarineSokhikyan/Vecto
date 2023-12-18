@@ -1,0 +1,18 @@
+[
+  {
+    "Type": "ResizeEffect",
+    "Parameters": {
+      "Width": 100
+    }
+  },
+  {
+    "Type": "BlurEffect",
+    "Parameters": {
+      "Size": 2
+    }
+  },
+  {
+    "Type": "GrayscaleEffect",
+    "Parameters": {}
+  }
+]

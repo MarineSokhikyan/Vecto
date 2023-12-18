@@ -1,0 +1,94 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    font-family: Arial, sans-serif;
+}
+
+.image-box {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    vertical-align: top;
+    margin-right: 20px;
+    background-color: #ccdeef;
+}
+
+.upload-section {
+    margin-bottom: 15px;
+}
+
+.effect-section {
+    margin-bottom: 15px;
+}
+
+.radius-section {
+    margin-bottom: 15px;
+}
+
+.size-section {
+    margin-bottom: 15px;
+}
+
+progress {
+    width: 100%;
+}
+#progress-bar--container {
+    display: flex;
+    justify-content: center;
+}
+
+    #progress-bar--container svg {
+        width: 400px;
+    }
+
+#progress--circle {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+    stroke-linecap: round;
+}
+
+#progress--text {
+    fill: #28411b;
+    font-weight: 750;
+    font-size: 5.5px;
+    transform-origin: center;
+    transform: rotate(90deg);
+}
+
+svg {
+    transform: rotate(-90deg);
+}
+
+.meter-info {
+    box-sizing: border-box;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #eaeaea;
+    padding: 30px 20px;
+}
+
+#meter--ranger {
+    width: 100%;
+}
